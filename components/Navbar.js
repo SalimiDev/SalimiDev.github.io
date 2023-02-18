@@ -4,10 +4,10 @@ import Link from 'next/link';
 const Navbar = () => {
     const NavItems = [
         ['Home', '/'],
-        ['About', '#about'],
-        ['Skills', '#Skills'],
-        ['Projects', '#projects'],
-        ['Contact', '#contact'],
+        ['About', '/about'],
+        ['Skills', '/skills'],
+        ['Projects', '/projects'],
+        ['Contact', '/contact'],
     ];
 
     return (
