@@ -12,11 +12,11 @@ const SocialItems = [
 
 const SocialIcons = () => {
     return (
-        <ul className='py-2 flex justify-between w-[60%]'>
+        <ul className='w-[70%] py-2 flex justify-between'>
             {SocialItems.map((item, index) => (
                 <li
                     key={index}
-                    className='p-2 rounded-full bg-grayAccent-400 hover:bg-primary-300 transition duration-300 ease-in-out'>
+                    className='p-[5px] rounded-full bg-grayAccent-400 hover:bg-primary-300 transition duration-300 ease-in-out'>
                     <Link href={item.url}>{item.icon}</Link>
                 </li>
             ))}
