@@ -1,13 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaFacebookSquare, FaTwitterSquare, FaGithub, FaInstagram } from 'react-icons/fa';
+import { BsInstagram, BsWhatsapp } from 'react-icons/bs';
+import { RxTwitterLogo } from 'react-icons/rx';
+import { MdOutlineMail } from 'react-icons/md';
+import { FiTwitter } from 'react-icons/fi';
+import { FaGithub } from 'react-icons/fa';
 
 const SocialItems = [
-    { icon: <FaFacebookSquare />, url: 'www.google.com' },
-    { icon: <FaTwitterSquare />, url: 'www.google.com' },
-    { icon: <FaInstagram />, url: 'www.google.com' },
-    { icon: <FaGithub />, url: 'www.google.com' },
-    { icon: <FaGithub />, url: 'www.google.com' },
+    { icon: <MdOutlineMail size='16' />, url: 'www.google.com' },
+    { icon: <BsInstagram size='16' />, url: 'www.google.com' },
+    { icon: <BsWhatsapp size='16' />, url: 'www.google.com' },
+    { icon: <FiTwitter size='16' />, url: 'www.google.com' },
+    { icon: <FaGithub size='16' />, url: 'www.google.com' },
 ];
 
 const SocialIcons = () => {
@@ -16,7 +20,7 @@ const SocialIcons = () => {
             {SocialItems.map((item, index) => (
                 <li
                     key={index}
-                    className='p-[5px] rounded-full bg-grayAccent-400 hover:bg-primary-300 transition duration-300 ease-in-out'>
+                    className='p-[5px] rounded-full border-2 border-grayAccent-400  hover:bg-primary-300 transition duration-300 ease-in-out'>
                     <Link href={item.url}>{item.icon}</Link>
                 </li>
             ))}
