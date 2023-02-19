@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'class',
     content: [
         './app/**/*.{js,ts,jsx,tsx}',
         './pages/**/*.{js,ts,jsx,tsx}',
@@ -12,7 +13,7 @@ module.exports = {
                     50: '#FFFFFF',
                     100: '#AFBBD4',
                     200: '#8DA9F2',
-                    300: '#2563EB',
+                    300: '#037FFF',
                     400: '#1F2A40',
                     500: '#141b2d',
                     600: '#0D152B',

@@ -34,11 +34,11 @@ const Layout = ({ children }) => {
                 <title>{pageTitle}</title>
             </Head>
 
-            <aside className='w-80 h-full text-center bg-primary-400 text-white border-r border-grayAccent-600 overflow-auto'>
+            <aside className='w-80 h-full text-center bg-primary-100 dark:bg-primary-400  dark:text-primary-50 text-primary-800 overflow-auto'>
                 <AppSidebar />
             </aside>
 
-            <main className='w-full bg-primary-500 overflow-auto'>
+            <main className='w-full bg-primary-50 dark:bg-primary-500 overflow-auto'>
                 <Topbar />
                 {children}
             </main>
