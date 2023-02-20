@@ -11,11 +11,11 @@ const Navbar = () => {
     ];
 
     return (
-        <ul className='font-Montserrat'>
+        <ul className='font-nunito font-bold text-lg'>
             {NavItems.map((item, index) => (
                 <li
                     key={index}
-                    className='py-2 font-medium text-lg relative group hover:text-primary-50 dark:hover:text-primary-600 transition-all duration-300'>
+                    className='py-2 relative group hover:text-primary-50 dark:hover:text-primary-600 transition-all duration-300'>
                     <Link href={item[1]} className=' relative z-50 '>
                         {item[0]}
                     </Link>

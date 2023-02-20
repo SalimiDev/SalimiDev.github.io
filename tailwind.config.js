@@ -9,6 +9,8 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                'primary-white': '#FFFFFF',
+                'primary-black': '#000000',
                 primary: {
                     50: '#FFFFFF',
                     100: '#AFBBD4',
@@ -32,23 +34,24 @@ module.exports = {
                     800: '#292929',
                     900: '#141414',
                 },
-              
             },
             borderWidth: {
                 DEFAULT: '1px',
-                '0': '0',
-                '1/2':'0.5px',
-                '2': '2px',
-                '3': '3px',
-                '4': '4px',
-                '6': '6px',
-                '8': '8px',
-              }
+                0: '0',
+                '1/2': '0.5px',
+                2: '2px',
+                3: '3px',
+                4: '4px',
+                6: '6px',
+                8: '8px',
+            },
         },
         fontFamily: {
             Montserrat: ['Montserrat', 'sans-serif'],
             lato: ['Lato', 'sans-serif'],
             nunito: ['Nunito', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+            openSans: ['Open Sans', 'sans-serif'],
         },
     },
     plugins: [],

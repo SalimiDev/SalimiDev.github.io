@@ -7,21 +7,24 @@ import { FiTwitter } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa';
 
 const SocialItems = [
-    { icon: <MdOutlineMail size='16' />, url: 'www.google.com' },
-    { icon: <BsInstagram size='16' />, url: 'www.google.com' },
-    { icon: <BsWhatsapp size='16' />, url: 'www.google.com' },
-    { icon: <FiTwitter size='16' />, url: 'www.google.com' },
-    { icon: <FaGithub size='16' />, url: 'www.google.com' },
+    { icon: MdOutlineMail, url: 'www.google.com' },
+    { icon: BsInstagram, url: 'www.google.com' },
+    { icon: BsWhatsapp, url: 'www.google.com' },
+    { icon: FiTwitter, url: 'www.google.com' },
+    { icon: FaGithub, url: 'www.google.com' },
 ];
 
-const SocialIcons = () => {
+const SocialIcons = ({ size, width }) => {
+    console.log(width)
     return (
-        <ul className='w-[70%] py-2 flex justify-between'>
-            {SocialItems.map((item, index) => (
+        <ul className={`w-${width} py-2 flex justify-between`}>
+            {SocialItems.map(({ icon: Icon, url }, index) => (
                 <li
-                    key={index}
+                    key={`social-icon-${index}`}
                     className='p-[5px] rounded-full border-2 border-grayAccent-400  hover:bg-primary-300 transition duration-300 ease-in-out'>
-                    <Link href={item.url}>{item.icon}</Link>
+                    <Link href={url}>
+                        <Icon size={size} />
+                    </Link>
                 </li>
             ))}
         </ul>
