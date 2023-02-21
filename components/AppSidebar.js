@@ -21,7 +21,7 @@ const AppSidebar = () => {
                 <Navbar />
             </div>
             <div className='w-full flex flex-col justify-center'>
-                <div className='p-2 flex justify-center'>
+                <div className='flex justify-center'>
                     <SocialIcons size={16} width={44} />
                 </div>
                 <span className=' py-2  border-t-1/2 border-grayAccent-300 dark:border-grayAccent-600'>
