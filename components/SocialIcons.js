@@ -15,7 +15,6 @@ const SocialItems = [
 ];
 
 const SocialIcons = ({ size, width }) => {
-    console.log(width)
     return (
         <ul className={`w-${width} py-2 flex justify-between`}>
             {SocialItems.map(({ icon: Icon, url }, index) => (
