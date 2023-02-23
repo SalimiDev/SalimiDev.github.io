@@ -7,11 +7,11 @@ import { FiTwitter } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa';
 
 const SocialItems = [
-    { icon: MdOutlineMail, url: 'www.google.com' },
-    { icon: BsInstagram, url: 'www.google.com' },
-    { icon: BsWhatsapp, url: 'www.google.com' },
-    { icon: FiTwitter, url: 'www.google.com' },
-    { icon: FaGithub, url: 'www.google.com' },
+    { icon: MdOutlineMail, url: 'https://google.com' },
+    { icon: BsInstagram, url: 'https://google.com' },
+    { icon: BsWhatsapp, url: 'https://google.com' },
+    { icon: FiTwitter, url: 'https://google.com' },
+    { icon: FaGithub, url: 'https://google.com' },
 ];
 
 const SocialIcons = ({ size, width }) => {
@@ -21,7 +21,7 @@ const SocialIcons = ({ size, width }) => {
                 <li
                     key={`social-icon-${index}`}
                     className='p-[5px] rounded-full border-2 border-grayAccent-400  hover:bg-primary-300 transition duration-300 ease-in-out'>
-                    <Link href={url}>
+                    <Link href={url} target='_blank'>
                         <Icon size={size} />
                     </Link>
                 </li>
