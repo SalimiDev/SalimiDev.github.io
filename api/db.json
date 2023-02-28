@@ -1,0 +1,154 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "title": "Basic Skills",
+      "items": [
+        {
+          "id": 1,
+          "name": "HTML5",
+          "icon": "https://www.svgrepo.com/show/349402/html5.svg",
+          "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        },
+        {
+          "id": 2,
+          "name": "CSS3",
+          "icon": "https://www.svgrepo.com/show/373535/css.svg",
+          "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Programming Languages",
+      "items": [
+        {
+          "id": 1,
+          "name": "JavaScript",
+          "icon": "https://www.svgrepo.com/show/353925/javascript.svg",
+          "link": "https://en.wikipedia.org/wiki/JavaScript"
+        },
+        {
+          "id": 2,
+          "name": "TypeScript",
+          "icon": "https://www.svgrepo.com/show/354478/typescript-icon.svg",
+          "link": "https://www.typescriptlang.org/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Frameworks",
+      "items": [
+        {
+          "id": 1,
+          "name": "ReactJs",
+          "icon": "https://www.svgrepo.com/show/355190/reactjs.svg",
+          "link": "https://reactjs.org/"
+        },
+        {
+          "id": 2,
+          "name": "Next.js",
+          "icon": "https://www.svgrepo.com/show/306466/next-dot-js.svg",
+          "link": "https://nextjs.org/"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "State Management",
+      "items": [
+        {
+          "id": 1,
+          "name": "React Context",
+          "icon": "https://www.svgrepo.com/show/354204/preact.svg",
+          "link": "https://reactjs.org/docs/context.html"
+        },
+        {
+          "id": 2,
+          "name": "Redux",
+          "icon": "https://www.svgrepo.com/show/303557/redux-logo.svg",
+          "link": "https://redux.js.org/"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "CSS Frameworks",
+      "items": [
+        {
+          "id": 1,
+          "name": "Material UI",
+          "icon": "https://www.svgrepo.com/show/354048/material-ui.svg",
+          "link": "https://mui.com/"
+        },
+        {
+          "id": 2,
+          "name": "Styled Components",
+          "icon": "https://cdn.worldvectorlogo.com/logos/styled-components-1.svg",
+          "link": "https://styled-components.com/"
+        },
+        {
+          "id": 3,
+          "name": "Sass",
+          "icon": "https://www.svgrepo.com/show/354310/sass.svg",
+          "link": "https://sass-lang.com/"
+        },
+        {
+          "id": 4,
+          "name": "Tailwind CSS",
+          "icon": "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
+          "link": "https://tailwindcss.com/"
+        },
+        {
+          "id": 5,
+          "name": "Framer Motion",
+          "icon": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg",
+          "link": "https://www.framer.com/motion/"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Tools and Utilities",
+      "items": [
+        {
+          "id": 1,
+          "name": "Git",
+          "icon": "https://cdn.worldvectorlogo.com/logos/git-icon.svg",
+          "link": "https://git-scm.com/"
+        },
+        {
+          "id": 2,
+          "name": "npm",
+          "icon": "https://cdn.worldvectorlogo.com/logos/npm.svg",
+          "link": "https://www.npmjs.com/"
+        },
+        {
+          "id": 3,
+          "name": "Figma",
+          "icon": "https://www.svgrepo.com/show/354987/figma.svg",
+          "link": "https://www.figma.com/"
+        }
+      ]
+    },
+    {
+      "id": 50000,
+      "title": "Basic test",
+      "items": [
+        {
+          "id": 1,
+          "name": "HTML5",
+          "icon": "https://www.svgrepo.com/show/349402/html5.svg",
+          "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        },
+        {
+          "id": 2,
+          "name": "CSS3",
+          "icon": "https://www.svgrepo.com/show/373535/css.svg",
+          "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        }
+      ]
+    }
+  ]
+}
