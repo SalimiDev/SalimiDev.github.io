@@ -3,8 +3,10 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import AppSidebar from '@/components/AppSidebar';
 import Topbar from '@/components/Topbar';
+import useWindowSize from '@/hooks/useWindowSize';
 
 const Layout = ({ children }) => {
+    const windowSize = useWindowSize();
     const [pageTitle, setPageTitle] = useState('Mehdi Salimi');
     const { route } = useRouter();
 
@@ -35,7 +37,7 @@ const Layout = ({ children }) => {
             </Head>
 
             <aside className='w-screen fixed text-center overflow-auto lg:relative lg:w-80 bg-primary-100 dark:bg-primary-500 text-primary-black dark:text-primary-white'>
-                <AppSidebar />
+                <AppSidebar windowSize={windowSize} />
             </aside>
 
             <main className='h-screen w-full overflow-auto bg-primary-50 dark:bg-primary-400'>
