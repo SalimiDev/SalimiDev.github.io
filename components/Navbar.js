@@ -1,10 +1,9 @@
-import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const Navbar = () => {
+const Navbar = ({ setIsNavOpen }) => {
     const { pathname } = useRouter();
-    
+
     //Define an array of navigation items
     const NavItems = [
         { name: 'Home', link: '/' },
@@ -23,7 +22,8 @@ const Navbar = () => {
                         key={`nav-item-${index}`}
                         className={`relative py-2 group hover:text-primary-white transition-all duration-300 ${
                             active && ' bg-primary-300 text-primary-white'
-                        }`}>
+                        }`}
+                        onClick={() => setIsNavOpen(false)}>
                         <Link href={link} className='relative z-50 block uppercase'>
                             {name}
                         </Link>

@@ -29,7 +29,7 @@ const AppSidebar = ({ windowSize }) => {
                 className={`w-full top-16 px-[5px] fixed z-40 lg:relative lg:block -lg:bg-primary-200 -lg:dark:bg-primary-900 -lg:opacity-90 ${
                     !isNavOpen && 'hidden'
                 }`}>
-                <Navbar />
+                <Navbar setIsNavOpen={setIsNavOpen} />
             </div>
             <div className='flex flex-col justify-center lg:w-full lg:flex-row'>
                 <div className='flex justify-center space-x-2 '>
