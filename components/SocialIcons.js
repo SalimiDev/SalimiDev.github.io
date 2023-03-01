@@ -16,7 +16,7 @@ const SocialItems = [
 
 const SocialIcons = ({ size, width }) => {
     return (
-        <ul className={`w-${width} py-2 flex justify-between`}>
+        <ul className={`w-${width} py-2 flex space-x-1`}>
             {SocialItems.map(({ icon: Icon, url }, index) => (
                 <li
                     key={`social-icon-${index}`}

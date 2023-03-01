@@ -22,7 +22,7 @@ const AppSidebar = ({ windowSize }) => {
                     alt='user'
                     className='w-16  p-2 ml-1 rounded-full shadow-xl border-primary-400 lg:p-0 lg:w-36 lg:mx-auto  lg:border-8  dark:border-primary-200'
                 />
-                <h3 className='font-poppins text-sm my-auto lg:text-3xl  lg:py-2  -sm:hidden '>Mehdi Salimi</h3>
+                <h3 className='font-poppins text-sm font-bold my-auto lg:text-3xl  lg:py-2  -sm:hidden'>Mehdi Salimi</h3>
             </div>
 
             <div
@@ -33,7 +33,7 @@ const AppSidebar = ({ windowSize }) => {
             </div>
             <div className='flex flex-col justify-center lg:w-full lg:flex-row'>
                 <div className='flex justify-center space-x-2 '>
-                    <SocialIcons size={5} width={36} />
+                    <SocialIcons size={6} width={36} />
                     <HamburgerIcon isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
                 </div>
                 <span className='py-2 border-t-1/2 lg:border-grayAccent-300 dark:border-grayAccent-700 hidden'>
