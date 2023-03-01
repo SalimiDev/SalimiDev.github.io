@@ -29,16 +29,16 @@ const Layout = ({ children }) => {
     }, [setPageTitleCallback]);
 
     return (
-        <div className='flex w-screen overflow-hidden'>
+        <div className='lg:flex w-screen overflow-hidden'>
             <Head>
                 <title>{pageTitle}</title>
             </Head>
 
-            <aside className='w-96 text-center bg-primary-100 dark:bg-primary-400 text-primary-black dark:text-primary-white overflow-auto'>
+            <aside className='w-screen fixed text-center overflow-auto lg:relative lg:w-80 bg-primary-100 dark:bg-primary-500 text-primary-black dark:text-primary-white'>
                 <AppSidebar />
             </aside>
 
-            <main className='h-screen w-full bg-primary-50 dark:bg-primary-500 overflow-auto'>
+            <main className='h-screen w-full overflow-auto bg-primary-50 dark:bg-primary-400'>
                 <Topbar />
                 {children}
             </main>

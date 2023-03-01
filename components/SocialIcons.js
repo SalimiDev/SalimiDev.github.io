@@ -22,7 +22,7 @@ const SocialIcons = ({ size, width }) => {
                     key={`social-icon-${index}`}
                     className='p-[5px] rounded-full border-2 border-grayAccent-400  hover:bg-primary-300 transition duration-300 ease-in-out'>
                     <Link href={url} target='_blank'>
-                        <Icon size={size} />
+                        <Icon size={size*2} />
                     </Link>
                 </li>
             ))}

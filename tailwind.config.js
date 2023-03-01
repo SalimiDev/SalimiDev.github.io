@@ -45,6 +45,12 @@ module.exports = {
                 6: '6px',
                 8: '8px',
             },
+            screens: {
+                '-sm': {'max': '350px'},
+                // => @media (max-width: 639px) { ... }
+                '-lg': {'max': '1024px'},
+                // => @media (max-width: 1024px) { ... }
+              }
         },
         fontFamily: {
             Montserrat: ['Montserrat', 'sans-serif'],

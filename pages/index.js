@@ -13,7 +13,7 @@ export default function Home() {
             </div>
 
             <span className='w-full flex justify-center text-primary-black dark:text-primary-white'>
-                <SocialIcons size={20} width={48} />
+                <SocialIcons size={10} width={48} />
             </span>
         </div>
     );
