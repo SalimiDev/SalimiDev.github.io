@@ -1,9 +1,10 @@
-import { useState, useLayoutEffect, useCallback, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import userImg from '../public/assets/userImg.png';
 import Navbar from './Navbar';
 import SocialIcons from './SocialIcons';
+import HamburgerIcon from './HamburgerIcon';
 
 const AppSidebar = ({ windowSize }) => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -45,13 +46,5 @@ const AppSidebar = ({ windowSize }) => {
         </div>
     );
 };
-
-const HamburgerIcon = ({ isNavOpen, setIsNavOpen }) => (
-    <div className='HAMBURGER-ICON space-y-2 px-2 my-auto lg:hidden' onClick={() => setIsNavOpen(!isNavOpen)}>
-        <span className='block h-0.5 w-8 animate-pulse bg-gray-600'></span>
-        <span className='block h-0.5 w-8 animate-pulse bg-gray-600'></span>
-        <span className='block h-0.5 w-8 animate-pulse bg-gray-600'></span>
-    </div>
-);
 
 export default AppSidebar;
