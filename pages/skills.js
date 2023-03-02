@@ -1,9 +1,13 @@
 import React from 'react';
+import Header from '@/components/Header';
 
 const Skills = () => {
     return (
         <div>
-           Skills Page 
+            <Header
+                pageTitle={'My Skills'}
+                pageDesc={' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, provident!'}
+            />
         </div>
     );
 };

@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
                 <title>{pageTitle}</title>
             </Head>
 
-            <aside className='w-screen fixed text-center overflow-auto lg:relative lg:w-80 bg-primary-100 dark:bg-primary-500 text-primary-black dark:text-primary-white'>
+            <aside className='w-screen fixed text-center z-10 overflow-auto lg:relative lg:w-80 bg-primary-100 dark:bg-primary-500 text-primary-black dark:text-primary-white'>
                 <AppSidebar windowSize={windowSize} />
             </aside>
 
