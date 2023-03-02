@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import SkillCard from '@/components/SkillCard';
+import { loadPosts } from '@/utils/load-skills';
 
-const Skills = () => {
+const Skills = ({ skills }) => {
     return (
         <section className='px-3'>
             <Header
@@ -12,11 +13,23 @@ const Skills = () => {
                 }
             />
 
-            <div>
-                <SkillCard />
+            <div className='space-y-4'>
+                {skills.map(skill => (
+                    <SkillCard key={skill.id} skill={skill} />
+                ))}
             </div>
         </section>
     );
 };
 
 export default Skills;
+
+export async function getStaticProps() {
+    const skills = await loadPosts();
+
+    return {
+        props: {
+            skills,
+        },
+    };
+}
