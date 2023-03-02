@@ -1,14 +1,19 @@
 import React from 'react';
 import Header from '@/components/Header';
+import SkillCard from '@/components/SkillCard';
 
 const Skills = () => {
     return (
-        <div>
+        <section className='px-3'>
             <Header
                 pageTitle={'My Skills'}
-                pageDesc={' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, provident!'}
+                pageDesc={' I design for humans to help brands grow. I combine our passion for design focused in people with advanced development technologies.'}
             />
-        </div>
+
+            <div>
+    <SkillCard/>
+            </div>
+        </section>
     );
 };
 
