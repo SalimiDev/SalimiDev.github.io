@@ -9,7 +9,7 @@ const SkillCard = ({skill}) => {
             </span>
             <div className='space-y-2'>
                 <h2 className='text-xl font-bold'>{skill.title}</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut earum magni soluta, et non quasi?</p>
+                <p>{skill.description}</p>
             </div>
         </div>
     );
