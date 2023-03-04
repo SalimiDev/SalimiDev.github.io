@@ -5,7 +5,7 @@ import { loadPosts } from '@/utils/load-skills';
 
 const Skills = ({ skills }) => {
     return (
-        <section className='px-3'>
+        <section className='px-3 w-full space-y-12'>
             <Header
                 pageTitle={'My Skills'}
                 pageDesc={
@@ -13,7 +13,7 @@ const Skills = ({ skills }) => {
                 }
             />
 
-            <div className='space-y-4'>
+            <div className=' flex flex-wrap justify-around w-full'>
                 {skills.map(skill => (
                     <SkillCard key={skill.id} skill={skill} />
                 ))}
