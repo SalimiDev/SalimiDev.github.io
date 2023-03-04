@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 
 export function useFilteredData(data) {
     const [filteredData, setFilteredData] = useState(data);
+    const [activeTab, setActiveTab] = useState('All');
 
     const categories = useMemo(() => {
         return data.reduce((acc, item) => {
@@ -22,7 +23,8 @@ export function useFilteredData(data) {
             newData = data.filter(item => item.category === tabName);
         }
         setFilteredData(newData);
+        setActiveTab(tabName);
     };
 
-    return { filteredData, tabList, handleFilter };
+    return { filteredData, tabList, activeTab, handleFilter };
 }
