@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useMemo } from 'react';
 import Header from '@/components/Header';
 import SkillCard from '@/components/SkillCard';
 import { loadPosts } from '@/utils/load-skills';
@@ -21,8 +20,8 @@ const Skills = ({ skills }) => {
                     {tabList.map((tabName, index) => (
                         <li
                             key={index}
-                            className={`px-3 py-2 mb-3 text-primary-white  font-lato shadow-slate-900 shadow-md hover:bg-yellow-300  hover:text-primary-500 transition duration-200 cursor-pointer ${
-                                activeTab === tabName ? 'bg-yellow-300 text-primary-500' : 'bg-primary-300'
+                            className={`px-3 py-2 mb-3 text-primary-white  font-lato select-none shadow-slate-900 shadow-md active:scale-105 hover:bg-yellow-300  hover:text-primary-500 transition duration-200 cursor-pointer ${
+                                activeTab === tabName ? 'bg-yellow-300 text-primary-700' : 'bg-primary-300'
                             }`}
                             onClick={() => handleFilter(tabName)}>
                             {tabName}
@@ -32,7 +31,7 @@ const Skills = ({ skills }) => {
             </nav>
 
             <div className=' flex flex-wrap w-full'>
-                {filteredData.map(skill => (
+                {filteredData?.map(skill => (
                     <SkillCard key={skill.id} skill={skill} />
                 ))}
             </div>
