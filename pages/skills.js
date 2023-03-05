@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import Header from '@/components/Header';
+import CategoryNav from '@/components/CategoryNav';
 import SkillCard from '@/components/SkillCard';
 import { loadPosts } from '@/utils/load-skills';
 import { useFilteredData } from '@/hooks/useFilteredData';
@@ -15,22 +17,9 @@ const Skills = ({ skills }) => {
                 }
             />
 
-            <nav>
-                <ul className='w-full flex flex-wrap space-x-2 justify-center'>
-                    {tabList.map((tabName, index) => (
-                        <li
-                            key={index}
-                            className={`px-3 py-2 mb-3 text-primary-white  font-lato select-none shadow-slate-900 shadow-md active:scale-105 hover:bg-yellow-300  hover:text-primary-500 transition duration-200 cursor-pointer ${
-                                activeTab === tabName ? 'bg-yellow-300 text-primary-700' : 'bg-primary-300'
-                            }`}
-                            onClick={() => handleFilter(tabName)}>
-                            {tabName}
-                        </li>
-                    ))}
-                </ul>
-            </nav>
+            <CategoryNav handleFilter={handleFilter} activeTab={activeTab} tabList={tabList} />
 
-            <div className=' flex flex-wrap w-full'>
+            <div className='w-full flex flex-wrap'>
                 {filteredData?.map(skill => (
                     <SkillCard key={skill.id} skill={skill} />
                 ))}
