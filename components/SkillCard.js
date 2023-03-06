@@ -15,7 +15,7 @@ const SkillCard = ({ skill }) => {
             </span>
             <div className='space-y-2'>
                 <h2 className='text-xl font-bold'>{skill.title}</h2>
-                <p>{skill.description}</p>
+                <p className='font-nunito '>{skill.description}</p>
             </div>
         </motion.div>
     );
