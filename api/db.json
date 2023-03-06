@@ -131,5 +131,43 @@
             "description": "Cloud-based design and prototyping tool used for creating and collaborating on user interfaces, graphics, and other design projects. It provides a streamlined workflow and real-time collaboration features.",
             "category": "Tools and Utilities"
         }
+    ],
+    "softSkills": [
+        {
+            "id": 1,
+            "title": "Communication Skills",
+            "description": "The ability to articulate and understand information, ideas, and emotions through verbal, nonverbal, and written methods in various contexts.",
+            "icon": "https://www.svgrepo.com/show/354987/figma.svg"
+        },
+        {
+            "id": 2,
+            "title": "Collaboration",
+            "description": "The act of working cooperatively with others towards a common goal, while valuing diverse perspectives, sharing responsibility, and communicating effectively.",
+            "icon": "https://www.svgrepo.com/show/354987/figma.svg"
+        },
+        {
+            "id": 3,
+            "title": "Adaptability",
+            "description": "The ability to adjust and thrive in changing circumstances or situations, by being flexible, open-minded, and able to learn and grow from experience.",
+            "icon": "https://www.svgrepo.com/show/354987/figma.svg"
+        },
+        {
+            "id": 4,
+            "title": "Time Management",
+            "description": "The ability to effectively plan, prioritize, and manage one's time and tasks, in order to achieve goals efficiently and effectively.",
+            "icon": "https://www.svgrepo.com/show/354987/figma.svg"
+        },
+        {
+            "id": 5,
+            "title": "Creativity",
+            "description": "The ability to generate unique and innovative ideas or solutions using imagination and originality.",
+            "icon": "https://www.svgrepo.com/show/354987/figma.svg"
+        },
+        {
+            "id": 6,
+            "title": "Continuous Learning",
+            "description": "The desire and ability to acquire new knowledge, skills, and perspectives throughout one's life.",
+            "icon": "https://www.svgrepo.com/show/354987/figma.svg"
+        }
     ]
 }
