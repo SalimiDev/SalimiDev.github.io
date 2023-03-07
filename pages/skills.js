@@ -33,7 +33,7 @@ const Skills = ({ skills, softSkills }) => {
             <div className='w-full flex flex-wrap gap-10 justify-between dark:text-primary-white'>
                 {softSkills.map(item => {
                     return (
-                        <div key={item.id} className='w-full flex gap-3 md:w-[45%]'>
+                        <div key={item.id} className='w-full flex gap-6 md:w-[45%]'>
                             <Image src={item.icon} alt='skill image' width={70} height={70} />
                             <div className='space-y-3'>
                                 <h1 className='font-lato font-bold text-lg text-primary-black dark:text-primary-white'>{item.title}</h1>

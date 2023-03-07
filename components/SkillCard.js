@@ -14,7 +14,7 @@ const SkillCard = ({ skill }) => {
                 <Image src={skill.icon} alt='skill image' width={50} height={50} />
             </span>
             <div className='space-y-2'>
-                <h2 className='text-xl font-bold'>{skill.title}</h2>
+                <h2 className='text-xl font-bold dark:text-black '>{skill.title}</h2>
                 <p className='font-nunito '>{skill.description}</p>
             </div>
         </motion.div>
