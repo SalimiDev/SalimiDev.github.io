@@ -8,4 +8,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h1 {
+        @apply text-primary-black dark:text-primary-white text-3xl sm:text-4xl md:text-5xl font-bold font-nunito;
+    }
+    h2 {
+        @apply text-primary-black font-black text-3xl text-center font-lato dark:text-primary-white;
+    }
+    h3 {
+        @apply text-2xl font-lato lg:text-2xl font-bold text-center text-primary-black dark:text-primary-white;
+    }
+    h4 {
+        @apply text-xl font-lato  font-bold text-center text-primary-black dark:text-primary-white;
+    }
+    h5 {
+        @apply font-lato font-bold text-lg text-primary-black dark:text-primary-white;
+    }
+    h6 {
+        @apply font-lato font-bold  text-primary-black dark:text-primary-white;
+    }
+}
 
+@layer components {
+    .text-description {
+        @apply font-nunito text-grayAccent-800 dark:text-primary-100;
+    }
+}
