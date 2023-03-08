@@ -18,7 +18,7 @@ const Skills = ({ skills, softSkills }) => {
                     ' I design for humans to help brands grow. I combine our passion for design focused in people with advanced development technologies.'
                 }
             />
-            <h1 className='text-2xl font-lato lg:text-2xl font-bold text-center text-primary-black dark:text-primary-white'>Technical Skills</h1>
+            <h3>Technical Skills</h3>
             <CategoryNav handleFilter={handleFilter} activeTab={activeTab} tabList={tabList} />
 
             <AnimatePresence>
@@ -29,15 +29,15 @@ const Skills = ({ skills, softSkills }) => {
                 </div>
             </AnimatePresence>
 
-            <h1 className='text-2xl font-bold text-center pb-3 border-b text-primary-black dark:text-primary-white'>Soft Skills</h1>
+            <h3 className='border-b border-grayAccent-500 pb-3'>Soft Skills</h3>
             <div className='w-full flex flex-wrap gap-10 justify-between dark:text-primary-white'>
-                {softSkills.map(item => {
+                {softSkills.map(({ id, title, icon, description }) => {
                     return (
-                        <div key={item.id} className='w-full flex gap-6 md:w-[45%]'>
-                            <Image src={item.icon} alt='skill image' width={70} height={70} />
+                        <div key={id} className='w-full flex gap-6 md:w-[45%]'>
+                            <Image src={icon} alt={`${title}`} width={70} height={70} />
                             <div className='space-y-3'>
-                                <h1 className='font-lato font-bold text-lg text-primary-black dark:text-primary-white'>{item.title}</h1>
-                                <p className='font-nunito text-grayAccent-800 dark:text-primary-100'>{item.description}</p>
+                                <h5>{title}</h5>
+                                <p className='text-description'>{description}</p>
                             </div>
                         </div>
                     );

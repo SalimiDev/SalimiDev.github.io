@@ -33,4 +33,7 @@
     .text-description {
         @apply font-nunito text-grayAccent-800 dark:text-primary-100;
     }
+    .text-subtitle-lg {
+        @apply text-primary-black dark:text-primary-100 font-semibold text-sm md:text-lg;
+    }
 }
