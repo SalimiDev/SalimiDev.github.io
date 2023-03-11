@@ -1,10 +1,15 @@
 import { loadProjects } from '@/utils/load-datas';
 import Header from '@/components/Header';
 import ProjectCard from '@/components/ProjectCard';
+import { motion } from 'framer-motion';
 
 const Projects = ({ projects }) => {
     return (
-        <div className='w-full px-4 space-y-12 mb-16'>
+        <motion.div
+            className='w-full px-4 space-y-12 mb-16'
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4 }}>
             <Header
                 pageTitle={'My Projects'}
                 pageDesc={
@@ -17,7 +22,7 @@ const Projects = ({ projects }) => {
                     <ProjectCard key={project.id} project={project} />
                 ))}
             </section>
-        </div>
+        </motion.div>
     );
 };
 
