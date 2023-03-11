@@ -13,4 +13,13 @@ async function loadSoftSkills() {
     return data;
 }
 
-export { loadSkills, loadSoftSkills };
+async function loadProjects() {
+    const res = await fetch('http://localhost:8000/projects');
+    const data = await res.json();
+
+    return data;
+}
+
+
+
+export { loadSkills, loadSoftSkills , loadProjects };
