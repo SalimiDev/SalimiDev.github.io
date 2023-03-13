@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "serve-json": "json-server --watch --port=8000 ./api/db.json"
+        "serve-json": "json-server --watch --port=4000 ./api/db.json"
     },
     "dependencies": {
         "@next/font": "13.1.6",
