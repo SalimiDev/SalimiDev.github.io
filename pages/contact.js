@@ -10,9 +10,9 @@ import * as yup from 'yup';
 const Contact = () => {
     const validateSchema = yup
         .object({
-            fullName: yup.string().required(),
+            fullName: yup.string().required('Name is required.'),
             email: yup.string().email('Please enter a valid email address.').required('Email is required.'),
-            message: yup.string().required(),
+            message: yup.string().required('Message is required.'),
         })
         .required();
 
@@ -24,13 +24,13 @@ const Contact = () => {
         resolver: yupResolver(validateSchema),
     });
 
-    const onSubmit = (data) => {
-      
+    const onSubmit = data => {
         console.log(data);
     };
 
     const errorStyle = 'text-red-600 text-sm';
-    const inputStyle = 'w-full p-1 border-none bg-primary-100 dark:bg-primary-200';
+    const inputStyle =
+        'w-full p-1 border-none bg-primary-100 dark:bg-primary-200 focus:outline-none focus:shadow-inner focus:shadow-gray-300';
 
     return (
         <div className='w-full px-4 space-y-6 mb-16'>
@@ -58,17 +58,32 @@ const Contact = () => {
                 <h3 className='mb-8'>Get in Touch</h3>
                 <h4 className='flex justify-start'>Leave me a Message</h4>
 
-                <form onSubmit={handleSubmit(onSubmit)} className='w-full space-y-2'>
-                    <input {...register('fullName')} placeholder='Full Name' className={inputStyle} />
-                    {errors.fullName && <p className={errorStyle}>This field is required!</p>}
-
+                <form onSubmit={handleSubmit(onSubmit)} autocomplete='off' className='w-full space-y-2'>
+                    <input {...register('fullName')} autocomplete='new' placeholder='Full Name' className={inputStyle} />
                     <input {...register('email')} placeholder='Email' className={inputStyle} />
-                    {errors.email && <p className={errorStyle}>{errors?.email?.message}</p>}
-
-                    <textarea {...register('message')}  rows='10' placeholder='Message' className={inputStyle} />
-                    {errors.message && <p className={errorStyle}>Please enter your message.</p>}
-
+                    <textarea {...register('message')} rows='10' placeholder='Message' className={inputStyle} />
                     <input type='submit' className='w-full py-2 bg-primary-300 ' />
+
+                    <ul className='w-full px-1 space-y-1 bg-red-200 list-disc'>
+                        {errors?.fullName?.message && (
+                            <li className='flex gap-1 py-1'>
+                                <label className='text-red-700 text-sm font-bold'>● Full Name: </label>
+                                {<p className={errorStyle}>{errors?.fullName?.message}</p>}
+                            </li>
+                        )}
+                        {errors?.email?.message && (
+                            <li className='flex gap-1 py-1'>
+                                <label className='text-red-700 text-sm font-bold'>● Email:</label>
+                                {<p className={errorStyle}>{errors?.email?.message}</p>}
+                            </li>
+                        )}
+                        {errors?.message?.message && (
+                            <li className='flex gap-1 py-1'>
+                                <label className='text-red-700 text-sm font-bold'>● Message: </label>
+                                {<p className={errorStyle}>{errors?.message?.message}</p>}
+                            </li>
+                        )}
+                    </ul>
                 </form>
             </section>
         </div>
