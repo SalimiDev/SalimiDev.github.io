@@ -48,3 +48,12 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
+
+input::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+textarea::placeholder {
+    color: black;
+    opacity: 0.5;
+}
