@@ -4,16 +4,29 @@ import { IoCallOutline } from 'react-icons/io5';
 import { FaWhatsapp } from 'react-icons/fa';
 
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 
 const Contact = () => {
+    const validateSchema = yup
+        .object({
+            fullName: yup.string().required(),
+            email: yup.string().email('Please enter a valid email address.').required('Email is required.'),
+            message: yup.string().required(),
+        })
+        .required();
+
     const {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+    } = useForm({
+        resolver: yupResolver(validateSchema),
+    });
 
-    const onSubmit = () => {
-        console.log('first');
+    const onSubmit = (data) => {
+      
+        console.log(data);
     };
 
     const errorStyle = 'text-red-600 text-sm';
@@ -46,19 +59,13 @@ const Contact = () => {
                 <h4 className='flex justify-start'>Leave me a Message</h4>
 
                 <form onSubmit={handleSubmit(onSubmit)} className='w-full space-y-2'>
-                    <input {...register('fullName', { required: true })} placeholder='Full Name' className={inputStyle} />
+                    <input {...register('fullName')} placeholder='Full Name' className={inputStyle} />
                     {errors.fullName && <p className={errorStyle}>This field is required!</p>}
 
-                    <input {...register('email', { required: true })} placeholder='Email' className={inputStyle} />
-                    {errors.email && <p className={errorStyle}>Please enter your email!</p>}
+                    <input {...register('email')} placeholder='Email' className={inputStyle} />
+                    {errors.email && <p className={errorStyle}>{errors?.email?.message}</p>}
 
-                    <textarea
-                        {...register('message', { required: true })}
-                        cols='30'
-                        rows='10'
-                        placeholder='Message'
-                        className={inputStyle}
-                    />
+                    <textarea {...register('message')}  rows='10' placeholder='Message' className={inputStyle} />
                     {errors.message && <p className={errorStyle}>Please enter your message.</p>}
 
                     <input type='submit' className='w-full py-2 bg-primary-300 ' />
