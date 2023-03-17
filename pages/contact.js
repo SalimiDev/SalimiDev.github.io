@@ -6,9 +6,10 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Contact = () => {
-    const validateSchema = yup
+    const validationSchema = yup
         .object({
             fullName: yup.string().required('Name is required.'),
             email: yup.string().email('Please enter a valid email address.').required('Email is required.'),
@@ -16,16 +17,23 @@ const Contact = () => {
         })
         .required();
 
+    //react-hook-form
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm({
-        resolver: yupResolver(validateSchema),
+        resolver: yupResolver(validationSchema),
     });
 
     const onSubmit = data => {
         console.log(data);
+    };
+
+    const errorEffect = {
+        initial: { x: 300, opacity: 0 },
+        animate: { x: 0, opacity: 1 },
+        exit: { x: -300, opacity: 0 },
     };
 
     const errorStyle = 'text-red-600 text-sm';
@@ -64,26 +72,40 @@ const Contact = () => {
                     <textarea {...register('message')} rows='10' placeholder='Message' className={inputStyle} />
                     <input type='submit' className='w-full py-2 bg-primary-300 ' />
 
-                    <ul className='w-full px-1 space-y-1 bg-red-200 list-disc'>
-                        {errors?.fullName?.message && (
-                            <li className='flex gap-1 py-1'>
-                                <label className='text-red-700 text-sm font-bold'>● Full Name: </label>
-                                {<p className={errorStyle}>{errors?.fullName?.message}</p>}
-                            </li>
-                        )}
-                        {errors?.email?.message && (
-                            <li className='flex gap-1 py-1'>
-                                <label className='text-red-700 text-sm font-bold'>● Email:</label>
-                                {<p className={errorStyle}>{errors?.email?.message}</p>}
-                            </li>
-                        )}
-                        {errors?.message?.message && (
-                            <li className='flex gap-1 py-1'>
-                                <label className='text-red-700 text-sm font-bold'>● Message: </label>
-                                {<p className={errorStyle}>{errors?.message?.message}</p>}
-                            </li>
-                        )}
-                    </ul>
+                    <AnimatePresence>
+                        <ul className='w-full px-1 space-y-1 bg-red-200 list-disc overflow-hidden'>
+                            {errors?.fullName?.message && (
+                                <motion.li
+                                    variants={errorEffect}
+                                    initial='initial'
+                                    animate='animate'
+                                    className='flex gap-1 py-1'>
+                                    <label className='text-red-700 text-sm font-bold'>● Full Name: </label>
+                                    {<p className={errorStyle}>{errors?.fullName?.message}</p>}
+                                </motion.li>
+                            )}
+                            {errors?.email?.message && (
+                                <motion.li
+                                    variants={errorEffect}
+                                    initial='initial'
+                                    animate='animate'
+                                    className='flex gap-1 py-1'>
+                                    <label className='text-red-700 text-sm font-bold'>● Email:</label>
+                                    {<p className={errorStyle}>{errors?.email?.message}</p>}
+                                </motion.li>
+                            )}
+                            {errors?.message?.message && (
+                                <motion.li
+                                    variants={errorEffect}
+                                    initial='initial'
+                                    animate='animate'
+                                    className='flex gap-1 py-1'>
+                                    <label className='text-red-700 text-sm font-bold'>● Message: </label>
+                                    {<p className={errorStyle}>{errors?.message?.message}</p>}
+                                </motion.li>
+                            )}
+                        </ul>
+                    </AnimatePresence>
                 </form>
             </section>
         </div>
