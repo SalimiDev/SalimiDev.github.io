@@ -15,11 +15,13 @@
         "eslint": "8.34.0",
         "eslint-config-next": "13.1.6",
         "framer-motion": "^10.0.1",
+        "leaflet": "^1.9.3",
         "next": "13.1.6",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-hook-form": "^7.43.5",
         "react-icons": "^4.7.1",
+        "react-leaflet": "^4.2.1",
         "tailwind-scrollbar-hide": "^1.1.7",
         "yup": "^1.0.2"
     },

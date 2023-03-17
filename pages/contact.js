@@ -8,6 +8,11 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import dynamic from 'next/dynamic';
+const Map = dynamic(() => import('../components/Map'), {
+    ssr: false,
+});
+
 const Contact = () => {
     const validationSchema = yup
         .object({
@@ -60,6 +65,10 @@ const Contact = () => {
                 <span className='flex gap-3'>
                     <TfiLocationPin size={25} color='white' /> <p>Alborz , Iran</p>
                 </span>
+            </section>
+
+            <section>
+                <Map />
             </section>
 
             <section className='space-y-3'>
