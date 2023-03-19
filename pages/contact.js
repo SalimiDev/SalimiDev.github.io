@@ -85,7 +85,11 @@ const Contact = () => {
                         <input {...register('fullName')} autocomplete='new' placeholder='Full Name' className={inputStyle} />
                         <input {...register('email')} autocomplete='new' placeholder='Email' className={inputStyle} />
                         <textarea {...register('message')} rows='10' placeholder='Message' className={inputStyle} />
-                        <input type='submit' className='w-full py-2 bg-primary-300 ' />
+                        <input
+                            type='submit'
+                            value='Send Message'
+                            className='w-full py-2 bg-primary-300 text-primary-white cursor-pointer'
+                        />
 
                         <AnimatePresence>
                             <ul className='w-full px-1 space-y-1 bg-red-200 list-disc overflow-hidden'>
