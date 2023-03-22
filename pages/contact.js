@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import { TfiLocationPin, TfiEmail } from 'react-icons/tfi';
 import { IoCallOutline } from 'react-icons/io5';
@@ -10,15 +10,18 @@ import * as yup from 'yup';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import emailjs from '@emailjs/browser';
+import { ThreeDots } from 'react-loading-icons';
 import dynamic from 'next/dynamic';
 const Map = dynamic(() => import('../components/Map'), {
     ssr: false,
 });
 
 const Contact = () => {
+    const [sendingStatus, setSendingStatus] = useState(null);
+    const [loading, setLoading] = useState(false);
     const validationSchema = yup
         .object({
-            fullName: yup.string().required('Name is required.'),
+            name: yup.string().required('Name is required.'),
             email: yup.string().email('Please enter a valid email address.').required('Email is required.'),
             message: yup.string().required('Message is required.'),
         })
@@ -39,15 +42,21 @@ const Contact = () => {
     const EMAIL_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
     const EMAIL_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY;
 
+    const STATUS_CLEAR_TIME = 5000;
+
     const onSubmit = e => {
+        setLoading(true);
         emailjs.sendForm(EMAIL_SERVICE, EMAIL_TEMPLATE_ID, form.current, EMAIL_PUBLIC_KEY).then(
             result => {
-                console.log(result.text);
+                setLoading(false);
+                setSendingStatus('Message sent successfully.');
             },
             error => {
-                console.log(error.text);
+                setLoading(false);
+                setSendingStatus('Oops,somthing went wrong.');
             },
         );
+        setTimeout(() => setSendingStatus(''), STATUS_CLEAR_TIME);
     };
 
     const errorEffect = {
@@ -97,7 +106,7 @@ const Contact = () => {
                     <h4 className='flex justify-start'>Leave me a Message</h4>
 
                     <form ref={form} onSubmit={handleSubmit(onSubmit)} autoComplete='off' className='w-full space-y-2'>
-                        <input {...register('fullName')} autoComplete='new' placeholder='Full Name' className={inputStyle} />
+                        <input {...register('name')} autoComplete='new' placeholder='Full Name' className={inputStyle} />
                         <input {...register('email')} placeholder='Email' className={inputStyle} />
                         <textarea {...register('message')} rows='10' placeholder='Message' className={inputStyle} />
                         <input
@@ -108,14 +117,14 @@ const Contact = () => {
 
                         <AnimatePresence>
                             <ul className='w-full px-1 space-y-1 bg-red-200 list-disc overflow-hidden'>
-                                {errors?.fullName?.message && (
+                                {errors?.name?.message && (
                                     <motion.li
                                         variants={errorEffect}
                                         initial='initial'
                                         animate='animate'
                                         className='flex gap-1 py-1'>
                                         <label className='text-red-700 text-sm font-bold'>● Full Name: </label>
-                                        {<p className={errorStyle}>{errors?.fullName?.message}</p>}
+                                        {<p className={errorStyle}>{errors?.name?.message}</p>}
                                     </motion.li>
                                 )}
                                 {errors?.email?.message && (
@@ -139,6 +148,8 @@ const Contact = () => {
                                     </motion.li>
                                 )}
                             </ul>
+                            {loading && <ThreeDots height='1em' stroke="#98ff98"/>}
+                            <p>{sendingStatus}</p>
                         </AnimatePresence>
                     </form>
                 </section>

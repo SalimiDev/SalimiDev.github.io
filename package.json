@@ -23,6 +23,7 @@
         "react-hook-form": "^7.43.5",
         "react-icons": "^4.7.1",
         "react-leaflet": "^4.2.1",
+        "react-loading-icons": "^1.1.0",
         "tailwind-scrollbar-hide": "^1.1.7",
         "yup": "^1.0.2"
     },
