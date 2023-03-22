@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import Header from '@/components/Header';
 import { TfiLocationPin, TfiEmail } from 'react-icons/tfi';
 import { IoCallOutline } from 'react-icons/io5';
@@ -8,6 +9,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import emailjs from '@emailjs/browser';
 import dynamic from 'next/dynamic';
 const Map = dynamic(() => import('../components/Map'), {
     ssr: false,
@@ -31,8 +33,21 @@ const Contact = () => {
         resolver: yupResolver(validationSchema),
     });
 
-    const onSubmit = data => {
-        console.log(data);
+    //handle submiting form to sending message
+    const form = useRef();
+    const EMAIL_SERVICE = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
+    const EMAIL_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
+    const EMAIL_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY;
+
+    const onSubmit = e => {
+        emailjs.sendForm(EMAIL_SERVICE, EMAIL_TEMPLATE_ID, form.current, EMAIL_PUBLIC_KEY).then(
+            result => {
+                console.log(result.text);
+            },
+            error => {
+                console.log(error.text);
+            },
+        );
     };
 
     const errorEffect = {
@@ -81,9 +96,9 @@ const Contact = () => {
                     <h3 className='mb-8 xl:hidden'>Get in Touch</h3>
                     <h4 className='flex justify-start'>Leave me a Message</h4>
 
-                    <form onSubmit={handleSubmit(onSubmit)} className='w-full space-y-2'>
-                        <input {...register('fullName')} autocomplete='new' placeholder='Full Name' className={inputStyle} />
-                        <input {...register('email')} autocomplete='new' placeholder='Email' className={inputStyle} />
+                    <form ref={form} onSubmit={handleSubmit(onSubmit)} autoComplete='off' className='w-full space-y-2'>
+                        <input {...register('fullName')} autoComplete='new' placeholder='Full Name' className={inputStyle} />
+                        <input {...register('email')} placeholder='Email' className={inputStyle} />
                         <textarea {...register('message')} rows='10' placeholder='Message' className={inputStyle} />
                         <input
                             type='submit'
