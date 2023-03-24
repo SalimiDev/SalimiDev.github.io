@@ -70,9 +70,3 @@ textarea::placeholder {
         width: 100%;
     }
 }
-/* @media only screen and (min-width: 1280px) {
-    .leaflet-container {
-        height: 100%;
-        width: 100%;
-    }
-} */

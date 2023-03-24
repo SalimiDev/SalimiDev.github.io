@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Header from '@/components/Header';
 import { TfiLocationPin, TfiEmail } from 'react-icons/tfi';
 import { IoCallOutline } from 'react-icons/io5';
@@ -56,8 +56,12 @@ const Contact = () => {
                 setSendingStatus('Oops,somthing went wrong.');
             },
         );
-        setTimeout(() => setSendingStatus(''), STATUS_CLEAR_TIME);
     };
+
+    //clear sending status value
+    useEffect(() => {
+        setTimeout(() => setSendingStatus(''), STATUS_CLEAR_TIME);
+    }, [sendingStatus]);
 
     const errorEffect = {
         initial: { x: 300, opacity: 0 },
@@ -148,8 +152,8 @@ const Contact = () => {
                                     </motion.li>
                                 )}
                             </ul>
-                            {loading && <ThreeDots height='1em' stroke="#98ff98"/>}
-                            <p>{sendingStatus}</p>
+                            {loading && <ThreeDots height='0.8rem' stroke='#fcd34d' fill='#fbbf24' />}
+                            <p className='font-nunito font-bold text-black dark:text-white'>{sendingStatus}</p>
                         </AnimatePresence>
                     </form>
                 </section>
