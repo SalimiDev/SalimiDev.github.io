@@ -32,12 +32,12 @@ const AppSidebar = ({ windowSize }) => {
                 }`}>
                 <Navbar setIsNavOpen={setIsNavOpen} />
             </div>
-            <div className='flex flex-col justify-center lg:w-full lg:flex-row'>
+            <div className='flex flex-col justify-center lg:w-full'>
                 <div className='flex justify-center space-x-2 '>
                     <SocialIcons size={6} width={36} />
                     <HamburgerIcon isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
                 </div>
-                <span className='py-2 border-t-1/2 lg:border-grayAccent-300 dark:border-grayAccent-700 hidden'>
+                <span className='py-2 border-t-1/2 lg:border-grayAccent-300 dark:border-grayAccent-700 hidden lg:block'>
                     <Link href='www.github.com' className='font-nunito font-semibold text-sm md:text-base'>
                         &copy; 2023 <span className='hover:text-primary-300 transition duration-200'>Mehdi Salimi</span>
                     </Link>
