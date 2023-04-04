@@ -38,8 +38,8 @@ const Projects = ({ projects }) => {
                         <button
                             key={item}
                             onClick={changePage}
-                            className={`w-6 h-6 bg-primary-300 text-primary-white hover:bg-amber-400 transition duration-300 shadow-sm shadow-black ${
-                                currentPage === item && 'bg-amber-400'
+                            className={`w-6 h-6 text-primary-white hover:bg-amber-400 transition duration-300 shadow-sm shadow-black ${
+                                currentPage === item ? 'bg-amber-400' : 'bg-primary-300'
                             }`}>
                             {item}
                         </button>
