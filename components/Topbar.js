@@ -6,7 +6,7 @@ import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi';
 const Topbar = () => {
     const { isDarkMode, toggleDarkMode } = useDarkMode();
     return (
-        <div className='h-[10%] w-full  flex justify-end'>
+        <div className='h-[10%] w-full mt-16 flex justify-end lg:mt-0'>
             <span className='p-5 flex space-x-4'>
                 {isDarkMode ? (
                     <Link href='#/' onClick={toggleDarkMode}>
