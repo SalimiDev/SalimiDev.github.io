@@ -29,7 +29,7 @@ const ProjectCard = ({ project }) => {
                 <p>{description}</p>
             </div>
 
-            <button className='flex px-4 py-2 bg-primary-300 text-primary-white rounded-sm shadow-sm shadow-black hover:bg-amber-400 transition duration-300'>
+            <button className='flex px-4 py-2 bg-primary-300 text-primary-white rounded-sm shadow-sm shadow-black hover:bg-amber-400 hover:text-primary-400 transition duration-300'>
                 VIEW DEATAIL
             </button>
         </div>
