@@ -10,6 +10,7 @@ const Layout = ({ children }) => {
     const windowSize = useWindowSize();
     const [pageTitle, setPageTitle] = useState('Mehdi Salimi');
     const { route } = useRouter();
+    const { query } = useRouter();
 
     const getPageTitle = useMemo(() => {
         const pageTitles = {
@@ -38,7 +39,11 @@ const Layout = ({ children }) => {
             </Head>
 
             <aside className='w-screen fixed text-center z-10 overflow-auto lg:relative lg:w-80 bg-primary-100 dark:bg-primary-500 text-primary-black dark:text-primary-white'>
-                {route === '/admin' ? <AdminSidebar windowSize={windowSize} /> : <AppSidebar windowSize={windowSize} />}
+                {route === '/admin' || query.updateDataForm ? (
+                    <AdminSidebar windowSize={windowSize} />
+                ) : (
+                    <AppSidebar windowSize={windowSize} />
+                )}
             </aside>
 
             <main className='h-screen w-full overflow-auto bg-primary-50 dark:bg-primary-400'>
