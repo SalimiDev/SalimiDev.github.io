@@ -25,8 +25,8 @@ const NotFound = () => {
                 BACK TO HOME
             </button>
 
-            <span className='w-48'>
-                <SocialIcons size={20} />
+            <span className='w-full flex justify-center text-primary-black dark:text-primary-white'>
+                <SocialIcons size={10} width={48} />
             </span>
         </div>
     );
