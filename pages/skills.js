@@ -8,7 +8,10 @@ import { useFilteredData } from '@/hooks/useFilteredData';
 import { AnimatePresence } from 'framer-motion';
 import { FaChevronDown } from 'react-icons/fa';
 
-const Skills = ({ skills, softSkills }) => {
+import { softSkills } from '@/data/softSkillsData';
+import axios from 'axios';
+
+const Skills = ({ skills }) => {
     const { filteredData, tabList, activeTab, handleFilter } = useFilteredData(skills);
     const skillsContainerRef = useRef(null);
 
@@ -78,13 +81,16 @@ const Skills = ({ skills, softSkills }) => {
 export default Skills;
 
 export async function getStaticProps() {
-    const skills = await loadSkills();
-    const softSkills = await loadSoftSkills();
+    const fetcher = async () => {
+        const { data } = await axios.get('http://localhost:3000/api/skills');
+
+        return data.skills;
+    };
+    const skills = await fetcher();
 
     return {
         props: {
             skills,
-            softSkills,
         },
     };
 }

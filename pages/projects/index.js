@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import ProjectCard from '@/components/ProjectCard';
 import { motion } from 'framer-motion';
 import usePagination from '@/hooks/usePagination';
+import axios from 'axios';
 
 const Projects = ({ projects }) => {
     const itemsPerPage = 3; // number of items per page
@@ -56,7 +57,12 @@ const Projects = ({ projects }) => {
 export default Projects;
 
 export async function getStaticProps() {
-    const projects = await loadProjects();
+    const fetcher = async () => {
+        const { data } = await axios.get('http://localhost:3000/api/projects');
+
+        return data.projects;
+    };
+    const projects = await fetcher();
 
     return {
         props: {
