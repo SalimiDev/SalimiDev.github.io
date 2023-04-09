@@ -3,6 +3,7 @@ import Image from 'next/image';
 import aboutMe from '../public/assets/aboutMe.jpg';
 import { FaDownload } from 'react-icons/fa';
 import ResumeModal from '@/components/ResumeModal';
+import { AnimatePresence } from 'framer-motion';
 
 const About = () => {
     const [showModal, setShowModal] = useState(false);
@@ -65,9 +66,11 @@ const About = () => {
                 </div>
             </div>
             {showModal && (
-                <div className='fixed z-10 top-0 left-0 w-full h-screen flex items-center justify-center bg-slate-400/60'>
-                    <ResumeModal showModal={showModal} onClose={handleCloseModal} />
-                </div>
+                <AnimatePresence>
+                    <div className='fixed z-10 top-0 left-0 w-full h-screen flex items-center justify-center bg-slate-400/60'>
+                        <ResumeModal showModal={showModal} onClose={handleCloseModal} />
+                    </div>
+                </AnimatePresence>
             )}
         </div>
     );
