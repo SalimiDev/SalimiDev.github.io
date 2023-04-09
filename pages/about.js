@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import aboutMe from '../public/assets/aboutMe.jpg';
 import { FaDownload } from 'react-icons/fa';
+import ResumeModal from '@/components/ResumeModal';
 
 const About = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
     return (
-        <div className='h-[90%] lg:flex justify-center font-nunito px-4'>
+        <div className='h-screen lg:flex justify-center font-nunito px-4'>
             <div className='flex pb-10 flex-col justify-center space-y-5 leading-relaxed'>
                 <h1 className='mb-4'>About Me</h1>
                 <div className='space-y-5 items-center lg:flex lg:space-x-5'>
@@ -42,6 +53,7 @@ const About = () => {
                         </ul>
 
                         <button
+                            onClick={handleOpenModal}
                             style={{ marginTop: '40px' }}
                             className=' flex gap-2 px-4 py-2 bg-primary-300 text-primary-white rounded-sm lg:px-6 lg:py-3'>
                             DOWNLOAD RESUME
@@ -52,6 +64,11 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            {showModal && (
+                <div className='fixed z-10 top-0 left-0 w-full h-screen flex items-center justify-center bg-slate-400/60'>
+                    <ResumeModal showModal={showModal} onClose={handleCloseModal} />
+                </div>
+            )}
         </div>
     );
 };
