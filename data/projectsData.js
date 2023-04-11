@@ -15,7 +15,7 @@ export const projects = [
     },
     {
         id: 2,
-        title: 'Hillter Hotel',
+        title: 'TESLA Clone',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi, aliquid reiciendis minima neque fuga quas tempore earum, recusandae officia quidem nisi, aut ullam corporis!',
         demoLink: 'https://hillterhotel.netlify.app/',
@@ -29,7 +29,7 @@ export const projects = [
     },
     {
         id: 3,
-        title: 'Hillter Hotel',
+        title: 'Portfolio',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi, aliquid reiciendis minima neque fuga quas tempore earum, recusandae officia quidem nisi, aut ullam corporis!',
         demoLink: 'https://hillterhotel.netlify.app/',
@@ -43,7 +43,7 @@ export const projects = [
     },
     {
         id: 4,
-        title: 'Hillter Hotel',
+        title: 'Whats App Clone',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi, aliquid reiciendis minima neque fuga quas tempore earum, recusandae officia quidem nisi, aut ullam corporis!',
         demoLink: 'https://hillterhotel.netlify.app/',
@@ -57,7 +57,7 @@ export const projects = [
     },
     {
         id: 5,
-        title: 'Hillter Hotel',
+        title: 'project x',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi, aliquid reiciendis minima neque fuga quas tempore earum, recusandae officia quidem nisi, aut ullam corporis!',
         demoLink: 'https://hillterhotel.netlify.app/',
@@ -71,7 +71,7 @@ export const projects = [
     },
     {
         id: 6,
-        title: 'Hillter Hotel',
+        title: 'project y',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus modi, aliquid reiciendis minima neque fuga quas tempore earum, recusandae officia quidem nisi, aut ullam corporis!',
         demoLink: 'https://hillterhotel.netlify.app/',

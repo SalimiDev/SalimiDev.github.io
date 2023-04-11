@@ -9,7 +9,7 @@ const Projects = ({ projects }) => {
     const itemsPerPage = 3; // number of items per page
     const { slicedData, goToNextPage, goToPreviousPage, changePage, getPaginationGroup, totalPages, currentPage } =
         usePagination(projects, itemsPerPage);
-
+        
     return (
         <motion.div
             className='w-full px-4 space-y-6 mb-16'

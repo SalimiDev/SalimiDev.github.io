@@ -14,7 +14,7 @@ const Navbar = ({ setIsNavOpen }) => {
     ];
 
     return (
-        <ul className='font-poppins text-base md:text-lg'>
+        <ul className='font-poppins text-base md:text-lg relative z-50'>
             {NavItems.map(({ name, link }, index) => {
                 const active = link === pathname;
                 return (
