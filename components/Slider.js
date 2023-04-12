@@ -33,11 +33,11 @@ const Slider = ({ images }) => {
         spaceBetween: 10,
         breakpoints: {
             640: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 6,
             },
             768: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 10,
             },
             1024: {
@@ -48,9 +48,9 @@ const Slider = ({ images }) => {
     };
 
     return (
-        <div className='w-1/2 px-2'>
+        <div className='w-full lg:w-1/2 px-2'>
             <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Thumbs, Autoplay]} {...mainSwiperOptions}>
-                {images.map(image => (
+                {images?.map(image => (
                     <SwiperSlide key={image.id}>
                         <img src={image.src} alt={image.alt} />
                     </SwiperSlide>
@@ -58,7 +58,7 @@ const Slider = ({ images }) => {
             </Swiper>
 
             <Swiper modules={[Thumbs]} onSwiper={setThumbsSwiper} {...thumbsSwiperParams}>
-                {images.map(image => (
+                {images?.map(image => (
                     <SwiperSlide key={image.id}>
                         <img src={image.src} alt={image.alt} />
                     </SwiperSlide>

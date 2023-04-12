@@ -8,9 +8,22 @@ export const projects = [
         repository: 'https://github.com/SalimiDev/Hotel-ReactJsApp',
         techStack: ['reactjs', 'Sass'],
         coverImage: 'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-        galleryImages: [
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
+        sliderImages: [
+            {
+                id: 1,
+                src: 'https://cdn.pixabay.com/photo/2023/02/04/13/47/butterfly-7767228_1280.jpg',
+                alt: 'Image 1',
+            },
+            {
+                id: 2,
+                src: 'https://cdn.pixabay.com/photo/2023/03/22/20/16/muffin-7870491_1280.jpg',
+                alt: 'Image 2',
+            },
+            {
+                id: 3,
+                src: 'https://cdn.pixabay.com/photo/2023/03/27/13/48/squirrel-7880791_1280.jpg',
+                alt: 'Image 3',
+            },
         ],
     },
     {
@@ -22,9 +35,22 @@ export const projects = [
         repository: 'https://github.com/SalimiDev/Hotel-ReactJsApp',
         techStack: ['reactjs', 'Sass'],
         coverImage: 'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-        galleryImages: [
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
+        sliderImages: [
+            {
+                id: 1,
+                src: 'https://cdn.pixabay.com/photo/2023/02/04/13/47/butterfly-7767228_1280.jpg',
+                alt: 'Image 1',
+            },
+            {
+                id: 2,
+                src: 'https://cdn.pixabay.com/photo/2023/03/22/20/16/muffin-7870491_1280.jpg',
+                alt: 'Image 2',
+            },
+            {
+                id: 3,
+                src: 'https://cdn.pixabay.com/photo/2023/03/27/13/48/squirrel-7880791_1280.jpg',
+                alt: 'Image 3',
+            },
         ],
     },
     {
@@ -36,9 +62,22 @@ export const projects = [
         repository: 'https://github.com/SalimiDev/Hotel-ReactJsApp',
         techStack: ['reactjs', 'Sass'],
         coverImage: 'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-        galleryImages: [
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
+        sliderImages: [
+            {
+                id: 1,
+                src: 'https://cdn.pixabay.com/photo/2023/02/04/13/47/butterfly-7767228_1280.jpg',
+                alt: 'Image 1',
+            },
+            {
+                id: 2,
+                src: 'https://cdn.pixabay.com/photo/2023/03/22/20/16/muffin-7870491_1280.jpg',
+                alt: 'Image 2',
+            },
+            {
+                id: 3,
+                src: 'https://cdn.pixabay.com/photo/2023/03/27/13/48/squirrel-7880791_1280.jpg',
+                alt: 'Image 3',
+            },
         ],
     },
     {
@@ -50,9 +89,22 @@ export const projects = [
         repository: 'https://github.com/SalimiDev/Hotel-ReactJsApp',
         techStack: ['reactjs', 'Sass'],
         coverImage: 'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-        galleryImages: [
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
+        sliderImages: [
+            {
+                id: 1,
+                src: 'https://cdn.pixabay.com/photo/2023/02/04/13/47/butterfly-7767228_1280.jpg',
+                alt: 'Image 1',
+            },
+            {
+                id: 2,
+                src: 'https://cdn.pixabay.com/photo/2023/03/22/20/16/muffin-7870491_1280.jpg',
+                alt: 'Image 2',
+            },
+            {
+                id: 3,
+                src: 'https://cdn.pixabay.com/photo/2023/03/27/13/48/squirrel-7880791_1280.jpg',
+                alt: 'Image 3',
+            },
         ],
     },
     {
@@ -64,9 +116,22 @@ export const projects = [
         repository: 'https://github.com/SalimiDev/Hotel-ReactJsApp',
         techStack: ['reactjs', 'Sass'],
         coverImage: 'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-        galleryImages: [
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
+        sliderImages: [
+            {
+                id: 1,
+                src: 'https://cdn.pixabay.com/photo/2023/02/04/13/47/butterfly-7767228_1280.jpg',
+                alt: 'Image 1',
+            },
+            {
+                id: 2,
+                src: 'https://cdn.pixabay.com/photo/2023/03/22/20/16/muffin-7870491_1280.jpg',
+                alt: 'Image 2',
+            },
+            {
+                id: 3,
+                src: 'https://cdn.pixabay.com/photo/2023/03/27/13/48/squirrel-7880791_1280.jpg',
+                alt: 'Image 3',
+            },
         ],
     },
     {
@@ -78,9 +143,22 @@ export const projects = [
         repository: 'https://github.com/SalimiDev/Hotel-ReactJsApp',
         techStack: ['reactjs', 'Sass'],
         coverImage: 'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-        galleryImages: [
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
-            'https://github.com/SalimiDev/TESLA-CLONE/raw/main/public/images/preview.jpg',
+        sliderImages: [
+            {
+                id: 1,
+                src: 'https://cdn.pixabay.com/photo/2023/02/04/13/47/butterfly-7767228_1280.jpg',
+                alt: 'Image 1',
+            },
+            {
+                id: 2,
+                src: 'https://cdn.pixabay.com/photo/2023/03/22/20/16/muffin-7870491_1280.jpg',
+                alt: 'Image 2',
+            },
+            {
+                id: 3,
+                src: 'https://cdn.pixabay.com/photo/2023/03/27/13/48/squirrel-7880791_1280.jpg',
+                alt: 'Image 3',
+            },
         ],
     },
 ];
