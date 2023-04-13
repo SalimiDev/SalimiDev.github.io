@@ -1,4 +1,3 @@
-import { loadProjects } from '@/utils/load-datas';
 import Header from '@/components/Header';
 import ProjectCard from '@/components/ProjectCard';
 import { motion } from 'framer-motion';
@@ -7,9 +6,10 @@ import axios from 'axios';
 
 const Projects = ({ projects }) => {
     const itemsPerPage = 3; // number of items per page
+
     const { slicedData, goToNextPage, goToPreviousPage, changePage, getPaginationGroup, totalPages, currentPage } =
         usePagination(projects, itemsPerPage);
-        
+
     return (
         <motion.div
             className='w-full px-4 space-y-6 mb-16'
@@ -60,7 +60,7 @@ export async function getStaticProps() {
     const fetcher = async () => {
         const { data } = await axios.get('http://localhost:3000/api/projects');
 
-        return data.projects;
+        return data;
     };
     const projects = await fetcher();
 
