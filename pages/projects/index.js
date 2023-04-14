@@ -4,12 +4,22 @@ import { motion } from 'framer-motion';
 import usePagination from '@/hooks/usePagination';
 import axios from 'axios';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Projects = ({ projects }) => {
     const itemsPerPage = 3; // number of items per page
 
     const { slicedData, goToNextPage, goToPreviousPage, changePage, getPaginationGroup, totalPages, currentPage } =
         usePagination(projects, itemsPerPage);
+
+    const router = useRouter();
+    const page = router.query.page;
+    // Check if requested page exists
+    if (page > totalPages) {
+        // Redirect to 404 page
+        router.push('/404');
+        return null;
+    }
 
     return (
         <motion.div
