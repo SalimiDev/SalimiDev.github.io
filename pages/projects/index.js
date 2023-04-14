@@ -3,6 +3,7 @@ import ProjectCard from '@/components/ProjectCard';
 import { motion } from 'framer-motion';
 import usePagination from '@/hooks/usePagination';
 import axios from 'axios';
+import Link from 'next/link';
 
 const Projects = ({ projects }) => {
     const itemsPerPage = 3; // number of items per page
@@ -32,7 +33,7 @@ const Projects = ({ projects }) => {
             {/* padination ui */}
             <div className='flex gap-1 dark:text-primary-white justify-center'>
                 <button onClick={goToPreviousPage} disabled={currentPage === 1} className='disabled:opacity-50'>
-                    Prev
+                    prev
                 </button>
                 <span className='flex gap-1 mx-3'>
                     {getPaginationGroup().map(item => (

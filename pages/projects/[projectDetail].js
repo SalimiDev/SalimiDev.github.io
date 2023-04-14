@@ -42,8 +42,6 @@ export async function getStaticProps(context) {
 
     const { data } = await axios.get(`http://localhost:3000/api/projects/${params.projectDetail}`);
 
-    // console.log(params.projectDetail);
-
     return {
         props: {
             projects: data,

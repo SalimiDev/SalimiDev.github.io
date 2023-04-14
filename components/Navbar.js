@@ -9,7 +9,7 @@ const Navbar = ({ setIsNavOpen }) => {
         { name: 'Home', link: '/' },
         { name: 'About', link: '/about' },
         { name: 'Skills', link: '/skills' },
-        { name: 'Projects', link: '/projects' },
+        { name: 'Projects', link: '/projects?page=1' },
         { name: 'Contact', link: '/contact' },
     ];
 
