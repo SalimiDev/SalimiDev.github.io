@@ -7,7 +7,7 @@ const usePagination = (data = [], itemsPerPage = 3) => {
     const page = Number(query.page);
     // State Variables
     const [currentPage, setCurrentPage] = useState(page);
-    const [totalPages, setTotalPages] = useState(0);
+    const [totalPages, setTotalPages] = useState(Math.ceil(data.length / itemsPerPage));
     const [slicedData, setSlicedData] = useState([]);
 
     // Helper Functions

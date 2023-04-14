@@ -17,7 +17,7 @@ const ResumeModal = ({ showModal, onClose }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className='w-full text-center mx-2 px-1 py-5 bg-primary-400 '>
+            className='w-full text-center mx-2 px-1 py-5 bg-primary-400 md:w-1/2'>
             <div className='w-full flex justify-end pr-2'>
                 <AiOutlineCloseCircle size={23} color='white' className='cursor-pointer' onClick={() => onClose()} />
             </div>
