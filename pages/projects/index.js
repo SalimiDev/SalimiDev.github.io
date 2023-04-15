@@ -5,6 +5,7 @@ import usePagination from '@/hooks/usePagination';
 import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const Projects = ({ projects }) => {
     const itemsPerPage = 3; // number of items per page
@@ -13,7 +14,15 @@ const Projects = ({ projects }) => {
         usePagination(projects, itemsPerPage);
 
     const router = useRouter();
-    const page = router.query.page;
+    const { asPath, query } = router;
+    const page = query.page;
+
+    useEffect(() => {
+        if (asPath === '/projects') {
+            router.replace('/projects?page=1');
+        }
+    }, [asPath, router]);
+
     // Check if requested page exists
     if (page > totalPages) {
         // Redirect to 404 page
