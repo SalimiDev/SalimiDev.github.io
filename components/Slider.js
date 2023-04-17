@@ -48,7 +48,7 @@ const Slider = ({ images }) => {
     };
 
     return (
-        <div className='w-full lg:w-1/2 px-2'>
+        <div className='w-full'>
             <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Thumbs, Autoplay]} {...mainSwiperOptions}>
                 {images?.map(image => (
                     <SwiperSlide key={image.id}>
