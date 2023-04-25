@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import { VscLoading } from 'react-icons/vsc';
-import Slider from '@/components/Slider';
+// import Slider from '@/components/Slider';
 import Link from 'next/link';
 //icons
 import { CgCodeSlash } from 'react-icons/cg';
@@ -23,7 +23,7 @@ const ProjectDetail = ({ projects }) => {
             <h2 className='mb-10 md:mb-14 lg:mb:16'>{projects.title}</h2>
             <div className='px-3 mb-16 lg:flex lg:gap-5 lg:px-8'>
                 <div className='mb-10 lg:w-1/2'>
-                    <Slider images={projects?.sliderImages} />
+                    {/* <Slider images={projects?.sliderImages} /> */}
                 </div>
 
                 <div className='space-y-6 text-center sm:text-start'>
