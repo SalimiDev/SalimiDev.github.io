@@ -6,8 +6,10 @@ import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+//data
+import { projects } from '@/data/projectsData';
 
-const Projects = ({ projects }) => {
+const Projects = () => {
     const itemsPerPage = 3; // number of items per page
 
     const { slicedData, goToNextPage, goToPreviousPage, changePage, getPaginationGroup, totalPages, currentPage } =
@@ -75,18 +77,3 @@ const Projects = ({ projects }) => {
 };
 
 export default Projects;
-
-export async function getStaticProps() {
-    const fetcher = async () => {
-        const { data } = await axios.get('http://localhost:3000/api/projects');
-
-        return data;
-    };
-    const projects = await fetcher();
-
-    return {
-        props: {
-            projects,
-        },
-    };
-}

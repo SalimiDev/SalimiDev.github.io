@@ -1,17 +1,17 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
+import axios from 'axios';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import CategoryNav from '@/components/CategoryNav';
 import SkillCard from '@/components/SkillCard';
-import { loadSkills, loadSoftSkills } from '@/utils/load-datas';
 import { useFilteredData } from '@/hooks/useFilteredData';
 import { AnimatePresence } from 'framer-motion';
 import { FaChevronDown } from 'react-icons/fa';
-
+//data
+import { skills } from '@/data/skillsData';
 import { softSkills } from '@/data/softSkillsData';
-import axios from 'axios';
 
-const Skills = ({ skills }) => {
+const Skills = () => {
     const { filteredData, tabList, activeTab, handleFilter } = useFilteredData(skills);
     const skillsContainerRef = useRef(null);
 
@@ -20,9 +20,9 @@ const Skills = ({ skills }) => {
         const scrollPosition = skillsContainerRef.current.scrollTop;
 
         skillsContainerRef.current.scrollTo({
-            top: scrollPosition + 250, // Scroll to 100px from the current position
-            left: 0, // Don't scroll horizontally
-            behavior: 'smooth', // Add smooth scrolling animation
+            top: scrollPosition + 250,
+            left: 0,
+            behavior: 'smooth',
         });
     };
 
@@ -31,7 +31,7 @@ const Skills = ({ skills }) => {
             <Header
                 pageTitle={'My Skills'}
                 pageDesc={
-                    ' I design for humans to help brands grow. I combine our passion for design focused in people with advanced development technologies.'
+                    'I design for humans to help brands grow. I combine our passion for design focused in people with advanced development technologies.'
                 }
             />
 
@@ -80,17 +80,3 @@ const Skills = ({ skills }) => {
 
 export default Skills;
 
-export async function getStaticProps() {
-    const fetcher = async () => {
-        const { data } = await axios.get('http://localhost:3000/api/skills');
-
-        return data.skills;
-    };
-    const skills = await fetcher();
-
-    return {
-        props: {
-            skills,
-        },
-    };
-}
