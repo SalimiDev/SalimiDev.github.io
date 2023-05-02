@@ -4,7 +4,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "deploy": "npm run build && next export && touch out/.nojekyll && echo 'mehdisalimi.com' > out/CNAME && gh-pages -d out",
+        "deploy": "npm run build && next export && echo out/.nojekyll && echo 'mehdisalimi.com' > out/CNAME && gh-pages -d out",
         "dev": "next dev",
         "build": "next build",
         "start": "next start",

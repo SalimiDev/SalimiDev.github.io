@@ -6,6 +6,9 @@ const nextConfig = {
     swcMinify: true,
     optimizeFonts: true,
     images: {
+        loader: 'imgix',
+        path: '',
+        unoptimized: true,
         remotePatterns: [
             {
                 protocol: 'https',
