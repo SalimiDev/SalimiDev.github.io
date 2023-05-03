@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-// import Slider from '@/components/Slider';
+import Slider from '@/components/Slider';
 import Link from 'next/link';
 //icons
 import { VscLoading } from 'react-icons/vsc';
@@ -29,7 +29,9 @@ const ProjectDetail = () => {
         <>
             <h2 className='mb-10 md:mb-14 lg:mb:16'>{title}</h2>
             <div className='px-3 mb-16 lg:flex lg:gap-5 lg:px-8'>
-                <div className='mb-10 lg:w-1/2'>{/* <Slider images={sliderImages} /> */}</div>
+                <div className='mb-10 lg:w-1/2'>
+                    <Slider images={sliderImages} />
+                </div>
 
                 <div className='space-y-6 text-center sm:text-start'>
                     <div className='flex flex-col items-center gap-1 sm:flex-row'>
