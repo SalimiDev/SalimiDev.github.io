@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import userImg from '../public/assets/userImg.png';
+import userImg from '../public/assets/userImg.jpg';
 import Navbar from './Navbar';
 import SocialIcons from './SocialIcons';
 import HamburgerIcon from './HamburgerIcon';
