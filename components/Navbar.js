@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const Navbar = ({ setIsNavOpen }) => {
-    const { pathname } = useRouter();
+    const router = useRouter();
+    const { asPath } = router;
 
     //Define an array of navigation items
     const NavItems = [
@@ -16,7 +17,7 @@ const Navbar = ({ setIsNavOpen }) => {
     return (
         <ul className='font-poppins text-base md:text-lg relative z-50'>
             {NavItems.map(({ name, link }, index) => {
-                const active = link === pathname;
+                const active = link === asPath;
                 return (
                     <li
                         key={`nav-item-${index}`}
