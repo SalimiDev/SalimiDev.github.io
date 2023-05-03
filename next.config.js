@@ -1,13 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    distDir: 'build',
     reactStrictMode: true,
-
+    output: 'export',
     swcMinify: true,
     optimizeFonts: true,
     images: {
         loader: 'imgix',
-        path: '',
+        path: '/assets',
         unoptimized: true,
         remotePatterns: [
             {
