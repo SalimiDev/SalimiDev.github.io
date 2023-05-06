@@ -2,22 +2,21 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const Navbar = ({ setIsNavOpen }) => {
-    const router = useRouter();
-    const { asPath } = router;
+    const { pathname } = useRouter();
 
     //Define an array of navigation items
     const NavItems = [
         { name: 'Home', link: '/' },
         { name: 'About', link: '/about' },
         { name: 'Skills', link: '/skills' },
-        { name: 'Projects', link: '/projects?page=1' },
+        { name: 'Projects', link: '/projects' },
         { name: 'Contact', link: '/contact' },
     ];
 
     return (
         <ul className='font-poppins text-base md:text-lg relative z-50'>
             {NavItems.map(({ name, link }, index) => {
-                const active = link === asPath;
+                const active = link === pathname;
                 return (
                     <li
                         key={`nav-item-${index}`}
