@@ -51,7 +51,7 @@ const Projects = () => {
                 ))}
             </section>
 
-            {/* padination ui */}
+            {/* pagination ui */}
             <div className='flex gap-1 dark:text-primary-white justify-center'>
                 <button onClick={goToPreviousPage} disabled={currentPage === 1} className='disabled:opacity-50'>
                     prev

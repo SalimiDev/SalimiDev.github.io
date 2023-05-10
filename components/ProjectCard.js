@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
     return (
         <div className='w-full h-auto mx-auto pb-5 p-3 mb-8 space-y-4 bg-primary-100  shadow-md shadow-black sm:w-[46%] lg:w-[30%]'>
             <div className='w-full h-64 relative overflow-hidden rounded-sm group '>
-                <Image src={coverImage} alt={title} fill sizes='' className='rounded-sm object-cover' />
+                <Image src={coverImage} alt={title} fill sizes='' className='rounded-sm' />
                 <div className='absolute w-0 h-full sm:bg-white opacity-75 transition-all duration-500 group-hover:w-full'></div>
                 <div className='w-full h-full flex justify-center items-end lg:items-center p-4 gap-4 absolute lg:z-20 lg:opacity-0 transition duration-500 group-hover:opacity-100 '>
                     <Link href={demoLink} target='_blank'>
