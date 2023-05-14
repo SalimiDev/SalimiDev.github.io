@@ -144,7 +144,7 @@ export const projects = [
         id: 4,
         title: 'Portfolio-2',
         description:
-            '<This></This> website built with React and Bootstrap for a responsive design. It utilizes Animate.css for subtle animations and React-Multi-Carousel for an interactive experience. The site features a contact form powered by Nodemailer.',
+            'This website built with React and Bootstrap for a responsive design. It utilizes Animate.css for subtle animations and React-Multi-Carousel for an interactive experience. The site features a contact form powered by Nodemailer.',
         demoLink: 'https://salimidev.github.io/portfolio-2',
         repository: 'https://github.com/SalimiDev/portfolio-2',
         techStack: ['reactjs', 'bootstrap', 'animate.css', 'nodemailer', 'react-multi-carousel'],
@@ -176,7 +176,7 @@ export const projects = [
         id: 5,
         title: 'Fitness App',
         description:
-            'Fitness App is a React-based app that helps users find correct form for exercises. It features a clean design built with styled-components and Material-UI components for a professional look and feel.',
+            'Fitness App is a React-based app for tracking workouts. It features a clean design built with styled-components and Material-UI components for a professional look and feel. The app allows users to easily find the correct form for exercises..',
         demoLink: 'https://salimidev.github.io/Fitness-App',
         repository: 'https://github.com/SalimiDev/Fitness-App',
         techStack: ['reactjs', 'styled-components', 'material-ui'],
