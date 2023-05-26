@@ -56,7 +56,7 @@ const ProjectDetail = () => {
                             </h4>
                         </span>
                         <Link
-                            href='https://www.techexplorist.com/wp-content/uploads/2023/04/genome.jpg'
+                            href={repository||{}}
                             target='_blank'
                             className='font-lato font-bold mt-1 text-primary-black dark:text-primary-white'>
                             {repository}
@@ -69,7 +69,7 @@ const ProjectDetail = () => {
                             <h4 className='whitespace-nowrap text-primary-300 dark:text-primary-100 '>Project Demo :</h4>
                         </span>
                         <Link
-                            href='https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'
+                            href={demoLink||{}}
                             target='_blank'
                             className='font-lato font-bold mt-1 text-primary-black dark:text-primary-white'>
                             {demoLink}
