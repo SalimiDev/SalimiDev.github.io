@@ -27,7 +27,7 @@ const ResumeModal = ({ showModal, onClose }) => {
                     Choose your prefered language for resume
                 </h5>
                 <div className='flex justify-center space-x-20'>
-                    <a href=''>
+                    <a href='https://github.com/SalimiDev/SalimiDev/blob/41664adccfa782def807157eee1533498e5dcb32/resume/Mehdi_Salimi-Frontend_Resume-Ordibehesht-402_eng.pdf?raw=true'>
                         <span className='space-y-3'>
                             <Image src={en} alt='eng' width={75} />
                             <h6 className='text-white'>English</h6>
