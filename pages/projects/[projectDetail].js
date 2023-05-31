@@ -28,7 +28,7 @@ const ProjectDetail = () => {
     return (
         <>
             <h2 className='mb-10 md:mb-14 lg:mb:16'>{title}</h2>
-            <div className='px-3 mb-16 lg:flex lg:gap-5 lg:px-8'>
+            <div className='px-3 mb-16 lg:flex lg:gap-5 lg:px-8 lg:mt-36'>
                 <div className='mb-10 lg:w-1/2'>
                     <Slider images={sliderImages} />
                 </div>
@@ -56,7 +56,7 @@ const ProjectDetail = () => {
                             </h4>
                         </span>
                         <Link
-                            href={repository||{}}
+                            href={repository || {}}
                             target='_blank'
                             className='font-lato font-bold mt-1 text-primary-black dark:text-primary-white'>
                             {repository}
@@ -69,7 +69,7 @@ const ProjectDetail = () => {
                             <h4 className='whitespace-nowrap text-primary-300 dark:text-primary-100 '>Project Demo :</h4>
                         </span>
                         <Link
-                            href={demoLink||{}}
+                            href={demoLink || {}}
                             target='_blank'
                             className='font-lato font-bold mt-1 text-primary-black dark:text-primary-white'>
                             {demoLink}
