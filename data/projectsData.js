@@ -100,6 +100,63 @@ export const projects = [
     },
     {
         id: 3,
+        title: 'Admin Dashboard',
+        description:
+            'Admin dashboard project utilizes React.js, Styled-Components, Tailwind CSS, and Formik to create a visually appealing and user-friendly interface, enabling efficient management and control of administrative tasks with ease.',
+        demoLink: 'https://salimidev.github.io/react-admin-dashboard',
+        repository: 'https://github.com/SalimiDev/react-admin-dashboard',
+        techStack: ['Reactjs', 'Styled-Components', 'Tailwind-CSS', 'Formik', 'nivo'],
+        coverImage: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_1.jpg',
+        sliderImages: [
+            {
+                id: 1,
+                src: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_1.jpg',
+                alt: 'Image 1',
+            },
+            {
+                id: 2,
+                src: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_2.jpg',
+                alt: 'Image 2',
+            },
+            {
+                id: 3,
+                src: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_3.jpg',
+                alt: 'Image 3',
+            },
+            {
+                id: 4,
+                src: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_4.jpg',
+                alt: 'Image 4',
+            },
+            {
+                id: 5,
+                src: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_5.jpg',
+                alt: 'Image 5',
+            },
+            {
+                id: 6,
+                src: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_6.jpg',
+                alt: 'Image 6',
+            },
+            {
+                id: 7,
+                src: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_7.jpg',
+                alt: 'Image 7',
+            },
+            {
+                id: 8,
+                src: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_8.jpg',
+                alt: 'Image 8',
+            },
+            {
+                id: 9,
+                src: 'https://github.com/SalimiDev/react-admin-dashboard/raw/main/preview/demo_9.jpg',
+                alt: 'Image 9',
+            },
+        ],
+    },
+    {
+        id: 4,
         title: 'Portfolio-1',
         description:
             "This portfolio website built with React and Sass. It uses Framer Motion for smooth animations and transitions. The site's content is dynamically managed with Sanity CMS, making it easy to update and maintain.",
@@ -141,7 +198,7 @@ export const projects = [
         ],
     },
     {
-        id: 4,
+        id: 5,
         title: 'Portfolio-2',
         description:
             'This website built with React and Bootstrap for a responsive design. It utilizes Animate.css for subtle animations and React-Multi-Carousel for an interactive experience. The site features a contact form powered by Nodemailer.',
@@ -173,7 +230,7 @@ export const projects = [
         ],
     },
     {
-        id: 5,
+        id: 6,
         title: 'Fitness App',
         description:
             'Fitness App is a React-based app for tracking workouts. It features a clean design built with styled-components and Material-UI components for a professional look and feel. The app allows users to easily find the correct form for exercises..',
@@ -195,7 +252,7 @@ export const projects = [
         ],
     },
     {
-        id: 6,
+        id: 7,
         title: 'Portfolio Next.js',
         description:
             'This portfolio is a Next.js-based website built with Tailwind CSS for a responsive design. It utilizes Yup for form validation and React Hook Form for easy form handling. The site features smooth animations and transitions with Framer Motion and Swiper for an interactive experience.',
