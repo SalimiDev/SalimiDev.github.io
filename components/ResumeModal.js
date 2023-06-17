@@ -33,7 +33,7 @@ const ResumeModal = ({ showModal, onClose }) => {
                             <h6 className='text-white'>English</h6>
                         </span>
                     </a>
-                    <a href=''>
+                    <a href='https://github.com/SalimiDev/SalimiDev/blob/da308fe677a30e7aef737c0bf16471655c7d12eb/resume/Mehdi_Salimi-Frontend_Resume-Tir-402_fa.pdf?raw=true'>
                         <span className='space-y-3'>
                             <Image src={fa} alt='eng' width={75} />
                             <h6 className='text-white'>Farsi</h6>
